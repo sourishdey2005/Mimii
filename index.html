@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sourish & Arunima Forever | 2026</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b5b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221015",
+                        "paper-pink": "#FCEEF2",
+                        "envelope-dark": "#e6b0bc",
+                        "envelope-light": "#f3d1d9",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "cursive": ["Great Vibes", "cursive"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom Envelope Styles for 3D effect */
+        .envelope-container {
+            perspective: 1000px;
+        }
+        .flap {
+            transform-origin: top;
+            transition: transform 0.8s ease-in-out, z-index 0.6s;
+            z-index: 40;
+        }
+        .letter-inner {
+            transition: transform 0.8s ease-in-out 0.4s, z-index 0.2s;
+            z-index: 20;
+        }
+        .pocket {
+            z-index: 30;
+        }
+
+        /* Opening Animation Logic applied via React classes */
+        .envelope-wrapper.is-open .flap {
+            transform: rotateX(180deg);
+            z-index: 10;
+        }
+        .envelope-wrapper.is-open .letter-inner {
+            transform: translateY(-80px);
+            z-index: 50;
+            transition: transform 1s ease-in-out 0.6s, z-index 0s linear 0.6s;
+        }
+
+        /* Smooth texture overlay */
+        .bg-texture {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA69H_7RF7UlzojHKRS9fdM67btlCLX0qOKtimyKbWSXMxf-QbmmH55X7MVtWKLz3vE3XLEnr8VlB76f_BbZ5F_ndU-5MQJYWEa905d62b03-dw3oWcjwaXEzCVvF-D-Lj9ZVjWGyL44-gsIUxjSNmbvIddqOKyoxLEFbWL9anSZ3YyT1aXbevCscHaMwxmhbA8TXHepbEBzDHNsHFXIcPf1el-7Z_hBHY26qc2_wNqK0LVaLzz5jrWmTrQa6lLTXGieYDAxZvUrZyb);
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+            cursor: none;
+        }
+
+        #cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ee2b5b;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+        #cursor-circle {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #e6b0bc;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.15s ease-out;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (pointer: coarse) {
+            #cursor-dot, #cursor-circle { display: none; }
+            body { cursor: auto; }
+        }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/"
+      }
+    }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#1b0d11] dark:text-white font-display overflow-hidden antialiased">
+    <div id="cursor-dot"></div>
+    <div id="cursor-circle"></div>
+    <div id="root"></div>
+    <script>
+        const dot = document.getElementById('cursor-dot');
+        const circle = document.getElementById('cursor-circle');
+        document.addEventListener('mousemove', (e) => {
+            dot.style.left = e.clientX + 'px';
+            dot.style.top = e.clientY + 'px';
+            circle.style.left = e.clientX + 'px';
+            circle.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>
