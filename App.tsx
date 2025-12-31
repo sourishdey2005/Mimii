@@ -15,6 +15,8 @@ import QuoteSlider from './components/QuoteSlider.tsx';
 import BackgroundMusic from './components/BackgroundMusic.tsx';
 import CinematicStory from './components/CinematicStory.tsx';
 import FutureDreams from './components/FutureDreams.tsx';
+import RomanticGallery from './components/RomanticGallery.tsx';
+import ExpandedGratitude from './components/ExpandedGratitude.tsx';
 
 const App: React.FC = () => {
   const [section, setSection] = useState<AppSection>(AppSection.ENVELOPE);
@@ -56,10 +58,17 @@ const App: React.FC = () => {
       <BackgroundMusic isPlaying={musicStarted} />
       
       {/* Conditionally render floating hearts if not in cinematic panel to avoid clutter */}
-      {section !== AppSection.CINEMATIC_STORY && section !== AppSection.FUTURE_DREAMS && <FloatingHearts />}
+      {section !== AppSection.CINEMATIC_STORY && 
+       section !== AppSection.FUTURE_DREAMS && 
+       section !== AppSection.ROMANTIC_GALLERY && 
+       section !== AppSection.EXPANDED_GRATITUDE && <FloatingHearts />}
 
       {/* Global Branding Header */}
-      {section !== AppSection.ENVELOPE && section !== AppSection.CINEMATIC_STORY && section !== AppSection.FUTURE_DREAMS && (
+      {section !== AppSection.ENVELOPE && 
+       section !== AppSection.CINEMATIC_STORY && 
+       section !== AppSection.FUTURE_DREAMS && 
+       section !== AppSection.ROMANTIC_GALLERY && 
+       section !== AppSection.EXPANDED_GRATITUDE && (
         <div className="fixed top-8 left-1/2 -translate-x-1/2 z-[60] flex flex-col items-center pointer-events-none animate-fadeIn">
           <span className="font-cursive text-2xl text-[#ee2b5b] opacity-60">Sourish & Arunima</span>
         </div>
@@ -95,9 +104,16 @@ const App: React.FC = () => {
             title="My Deepest Gratitude"
             subTitle="The foundation of everything"
             quotes={GRATITUDE_QUOTES}
-            onComplete={() => setSection(AppSection.FIRST_MET)}
+            onComplete={() => setSection(AppSection.EXPANDED_GRATITUDE)}
             animationClass="animate-fadeIn"
             themeColor="#ee2b5b"
+          />
+        )}
+
+        {section === AppSection.EXPANDED_GRATITUDE && (
+          <ExpandedGratitude 
+            onNext={() => setSection(AppSection.FIRST_MET)}
+            onBack={() => setSection(AppSection.GRATITUDE)}
           />
         )}
 
@@ -140,8 +156,15 @@ const App: React.FC = () => {
 
         {section === AppSection.FUTURE_DREAMS && (
           <FutureDreams 
-            onNext={() => setSection(AppSection.ROMANTIC)} 
+            onNext={() => setSection(AppSection.ROMANTIC_GALLERY)} 
             onBack={() => setSection(AppSection.CINEMATIC_STORY)}
+          />
+        )}
+
+        {section === AppSection.ROMANTIC_GALLERY && (
+          <RomanticGallery 
+            onNext={() => setSection(AppSection.ROMANTIC)}
+            onBack={() => setSection(AppSection.FUTURE_DREAMS)}
           />
         )}
 
