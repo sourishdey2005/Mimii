@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { AppSection } from './types';
+import { AppSection } from './types.ts';
 import { 
   GRATITUDE_QUOTES, 
   ROMANTIC_QUOTES, 
@@ -8,11 +8,11 @@ import {
   PROPOSAL_STORY, 
   FESTIVAL_STORY, 
   ANNIVERSARY_STORY 
-} from './constants';
-import FloatingHearts from './components/FloatingHearts';
-import Envelope from './components/Envelope';
-import QuoteSlider from './components/QuoteSlider';
-import BackgroundMusic from './components/BackgroundMusic';
+} from './constants.tsx';
+import FloatingHearts from './components/FloatingHearts.tsx';
+import Envelope from './components/Envelope.tsx';
+import QuoteSlider from './components/QuoteSlider.tsx';
+import BackgroundMusic from './components/BackgroundMusic.tsx';
 
 const App: React.FC = () => {
   const [section, setSection] = useState<AppSection>(AppSection.ENVELOPE);
@@ -45,7 +45,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full select-none font-display">
+    <div className="relative min-h-screen w-full select-none font-display overflow-x-hidden">
       <BackgroundMusic isPlaying={musicStarted} />
       <FloatingHearts />
 
@@ -56,7 +56,7 @@ const App: React.FC = () => {
         </div>
       )}
 
-      <div className="relative transition-all duration-1000 w-full">
+      <div className="relative transition-all duration-1000 w-full min-h-screen">
         {section === AppSection.ENVELOPE && (
           <Envelope isOpen={isOpen} onOpen={handleOpenEnvelope} onProceed={handleProceedFromLetter} />
         )}
@@ -168,7 +168,7 @@ const App: React.FC = () => {
               <p className="font-cursive text-3xl md:text-4xl text-[#B76E79] mb-12">Sourish & Arunima Forever</p>
               <button 
                 onClick={() => setSection(AppSection.CLOSING)}
-                className="px-16 py-5 bg-[#ee2b5b] text-white rounded-full font-sans tracking-[0.3em] uppercase text-[10px] hover:bg-[#d0244f] transition-all shadow-2xl active:scale-95 hover:scale-105"
+                className="px-16 py-5 bg-[#ee2b5b] text-white rounded-full font-sans tracking-[0.3em] uppercase text-[10px] hover:bg-[#d0244f] transition-all shadow-xl active:scale-95 hover:scale-105"
               >
                 Our Final Vow
               </button>

@@ -33,11 +33,16 @@
                     animation: {
                         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         'float': 'float 6s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s infinite linear',
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
                             '50%': { transform: 'translateY(-10px)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
                         }
                     }
                 },
@@ -79,8 +84,14 @@
         }
 
         body {
-            min-height: max(884px, 100dvh);
+            min-height: 100vh;
             cursor: none;
+            overflow-x: hidden;
+        }
+
+        #root {
+            min-height: 100vh;
+            width: 100%;
         }
 
         #cursor-dot {
@@ -101,13 +112,32 @@
             position: fixed;
             pointer-events: none;
             z-index: 9998;
-            transition: transform 0.15s ease-out;
+            transition: transform 0.1s ease-out;
             transform: translate(-50%, -50%);
         }
 
         @media (pointer: coarse) {
             #cursor-dot, #cursor-circle { display: none; }
             body { cursor: auto; }
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .heart-particle {
+            position: absolute;
+            animation: float-up linear forwards;
+        }
+
+        @keyframes float-up {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
         }
     </style>
     <script type="importmap">
@@ -122,10 +152,11 @@
 }
 </script>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-[#1b0d11] dark:text-white font-display overflow-hidden antialiased">
+<body class="bg-background-light dark:bg-background-dark text-[#1b0d11] dark:text-white font-display antialiased">
     <div id="cursor-dot"></div>
     <div id="cursor-circle"></div>
     <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
     <script>
         const dot = document.getElementById('cursor-dot');
         const circle = document.getElementById('cursor-circle');
