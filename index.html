@@ -6,9 +6,9 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Sourish & Arunima Forever | 2026</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Great+Vibes&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Great+Vibes&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
     <!-- Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,FILL@0..1&display=swap" rel="stylesheet"/>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <!-- Tailwind Config -->
@@ -21,6 +21,8 @@
                         "primary": "#ee2b5b",
                         "background-light": "#f8f6f6",
                         "background-dark": "#221015",
+                        "surface-dark": "#321a20",
+                        "text-secondary": "#c893a0",
                         "paper-pink": "#FCEEF2",
                         "envelope-dark": "#e6b0bc",
                         "envelope-light": "#f3d1d9",
@@ -36,7 +38,7 @@
                         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         'float': 'float 6s ease-in-out infinite',
                         'shimmer': 'shimmer 2s infinite linear',
-                        'fade-in-up': 'fadeInUp 1.2s ease-out forwards',
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
                     },
                     keyframes: {
                         float: {
@@ -72,7 +74,6 @@
         .glass { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
         .heart-particle { position: absolute; animation: float-up linear forwards; }
         
-        /* New Utility Styles */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .glass-panel {

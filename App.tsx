@@ -17,6 +17,7 @@ import CinematicStory from './components/CinematicStory.tsx';
 import FutureDreams from './components/FutureDreams.tsx';
 import RomanticGallery from './components/RomanticGallery.tsx';
 import ExpandedGratitude from './components/ExpandedGratitude.tsx';
+import MemoriesStrength from './components/MemoriesStrength.tsx';
 
 const App: React.FC = () => {
   const [section, setSection] = useState<AppSection>(AppSection.ENVELOPE);
@@ -61,14 +62,16 @@ const App: React.FC = () => {
       {section !== AppSection.CINEMATIC_STORY && 
        section !== AppSection.FUTURE_DREAMS && 
        section !== AppSection.ROMANTIC_GALLERY && 
-       section !== AppSection.EXPANDED_GRATITUDE && <FloatingHearts />}
+       section !== AppSection.EXPANDED_GRATITUDE && 
+       section !== AppSection.MEMORIES_STRENGTH && <FloatingHearts />}
 
       {/* Global Branding Header */}
       {section !== AppSection.ENVELOPE && 
        section !== AppSection.CINEMATIC_STORY && 
        section !== AppSection.FUTURE_DREAMS && 
        section !== AppSection.ROMANTIC_GALLERY && 
-       section !== AppSection.EXPANDED_GRATITUDE && (
+       section !== AppSection.EXPANDED_GRATITUDE && 
+       section !== AppSection.MEMORIES_STRENGTH && (
         <div className="fixed top-8 left-1/2 -translate-x-1/2 z-[60] flex flex-col items-center pointer-events-none animate-fadeIn">
           <span className="font-cursive text-2xl text-[#ee2b5b] opacity-60">Sourish & Arunima</span>
         </div>
@@ -145,8 +148,26 @@ const App: React.FC = () => {
             subTitle="Brighter together"
             quotes={FESTIVAL_STORY}
             themeColor="#be123c"
-            onComplete={() => setSection(AppSection.CINEMATIC_STORY)}
+            onComplete={() => setSection(AppSection.ANNIVERSARIES)}
             animationClass="animate-shimmer"
+          />
+        )}
+
+        {section === AppSection.ANNIVERSARIES && (
+          <QuoteSlider 
+            title="Pulses of Our Love"
+            subTitle="The 17th and the 25th"
+            quotes={ANNIVERSARY_STORY}
+            themeColor="#B76E79"
+            onComplete={() => setSection(AppSection.MEMORIES_STRENGTH)}
+            animationClass="animate-fadeIn"
+          />
+        )}
+
+        {section === AppSection.MEMORIES_STRENGTH && (
+          <MemoriesStrength 
+            onNext={() => setSection(AppSection.CINEMATIC_STORY)}
+            onBack={() => setSection(AppSection.ANNIVERSARIES)}
           />
         )}
 
@@ -228,6 +249,8 @@ const App: React.FC = () => {
         .animate-fadeIn { animation: fadeIn 2.5s ease-in-out forwards; }
         .animate-slideUp { animation: slideUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         .animate-scaleIn { animation: scaleIn 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
       `}} />
     </div>
   );
