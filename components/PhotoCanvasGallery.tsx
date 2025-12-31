@@ -19,9 +19,9 @@ const PhotoCanvasGallery: React.FC<PhotoCanvasGalleryProps> = ({ onNext, onBack 
     { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197522/IMG-20251126-WA0201_nuzhqd.jpg", caption: "The quiet times 🤫" },
     { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197520/IMG-20251201-WA0031_ika4qh.jpg", caption: "Our first trip ✈️" },
     { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197519/IMG-20251129-WA0145_lqq21s.jpg", caption: "Beautiful Soul 🌹" },
-    { url: "https://images.unsplash.com/photo-1475483768296-6163e08872a1?q=80&w=800", caption: "Golden hour 🌅" },
-    { url: "https://images.unsplash.com/photo-1516589174184-c6608450943f?q=80&w=800", caption: "Stolen glances 😉" },
-    { url: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=800", caption: "Forever us 💍" }
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767198071/20251123_141621_jwmmr3.jpg", caption: "Golden hour 🌅" },
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767198066/20251125_172738_pv8sa5.jpg", caption: "Stolen glances 😉" },
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767198066/20251125_172738_pv8sa5.jpg", caption: "Forever us 💍" }
   ];
 
   return (
