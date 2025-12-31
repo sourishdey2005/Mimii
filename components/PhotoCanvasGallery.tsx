@@ -12,13 +12,13 @@ const PhotoCanvasGallery: React.FC<PhotoCanvasGalleryProps> = ({ onNext, onBack 
   }, []);
 
   const memoryCanvas = [
-    { url: "https://images.unsplash.com/photo-1516589174184-c6608450943f?q=80&w=800", caption: "Our first morning ☕️" },
-    { url: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=800", caption: "Sweet laughter 😂❤️" },
-    { url: "https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=800", caption: "Hold my hand 🤝" },
-    { url: "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=800", caption: "Pure Magic ✨" },
-    { url: "https://images.unsplash.com/photo-1517602302552-47126ce40b88?q=80&w=800", caption: "The quiet times 🤫" },
-    { url: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=800", caption: "Our first trip ✈️" },
-    { url: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800", caption: "Beautiful Soul 🌹" },
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197520/IMG-20251126-WA0220_elqlgd.jpg", caption: "Our first morning ☕️" },
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197520/IMG-20251201-WA0030_luvpyt.jpg", caption: "Sweet laughter 😂❤️" },
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197521/IMG-20251126-WA0209_obgiyz.jpg", caption: "Hold my hand 🤝" },
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197522/IMG-20251123-WA0048_bo4fph.jpg", caption: "Pure Magic ✨" },
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197522/IMG-20251126-WA0201_nuzhqd.jpg", caption: "The quiet times 🤫" },
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197520/IMG-20251201-WA0031_ika4qh.jpg", caption: "Our first trip ✈️" },
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197519/IMG-20251129-WA0145_lqq21s.jpg", caption: "Beautiful Soul 🌹" },
     { url: "https://images.unsplash.com/photo-1475483768296-6163e08872a1?q=80&w=800", caption: "Golden hour 🌅" },
     { url: "https://images.unsplash.com/photo-1516589174184-c6608450943f?q=80&w=800", caption: "Stolen glances 😉" },
     { url: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=800", caption: "Forever us 💍" }
