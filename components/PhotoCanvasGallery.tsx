@@ -21,7 +21,7 @@ const PhotoCanvasGallery: React.FC<PhotoCanvasGalleryProps> = ({ onNext, onBack 
     { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197519/IMG-20251129-WA0145_lqq21s.jpg", caption: "Beautiful Soul 🌹" },
     { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767198071/20251123_141621_jwmmr3.jpg", caption: "Golden hour 🌅" },
     { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767198068/20251125_171644_cf8msb.jpg", caption: "Stolen glances 😉" },
-    { url: "", caption: "Forever us 💍" }
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767198824/IMG-20250921-WA0015_ywok1j.jpg", caption: "Forever us 💍" }
   ];
 
   return (
