@@ -29,7 +29,7 @@ const BackgroundMusic: React.FC<{ isPlaying: boolean }> = ({ isPlaying }) => {
       <audio 
         ref={audioRef} 
         loop 
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" 
+        src="https://res.cloudinary.com/dodhvvewu/video/upload/v1767189894/Tere_Liye_Prince_128_Kbps_hs6brw.mp3" 
       />
       <button 
         onClick={toggleMute}
