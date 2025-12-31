@@ -62,7 +62,7 @@ const RomanticGallery: React.FC<RomanticGalleryProps> = ({ onNext, onBack }) => 
             onClick={onBack}
             className="text-white/80 hover:text-white flex size-12 shrink-0 items-center justify-center rounded-full active:bg-white/10 transition-colors"
           >
-            <span className="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+            <span className="text-[24px]">⇠</span>
           </button>
           <h2 className="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center font-display drop-shadow-md">Our Love Story</h2>
           <div className="flex w-12 items-center justify-end">
@@ -93,12 +93,12 @@ const RomanticGallery: React.FC<RomanticGalleryProps> = ({ onNext, onBack }) => 
                   <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-90"></div>
                   <div className="absolute bottom-4 left-4 right-4 text-center">
                     <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-2">
-                      <span className="material-symbols-outlined text-white text-xl">favorite</span>
+                      <span className="text-white text-xl">❤️</span>
                     </div>
                   </div>
                 </div>
                 <div className="flex-1 flex flex-col items-center justify-center text-center p-6 -mt-4 relative z-10">
-                  <span className="material-symbols-outlined text-primary/40 text-4xl mb-2 rotate-180">format_quote</span>
+                  <span className="text-primary/40 text-5xl mb-2 italic">“</span>
                   <p 
                     className="text-white font-serif text-2xl lg:text-3xl italic leading-relaxed drop-shadow-lg"
                     dangerouslySetInnerHTML={{ __html: card.text }}
@@ -128,18 +128,18 @@ const RomanticGallery: React.FC<RomanticGalleryProps> = ({ onNext, onBack }) => 
               onClick={onNext}
               className="w-full py-4 bg-primary text-white rounded-xl font-sans tracking-[0.2em] uppercase text-xs font-bold shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all"
             >
-              Our Final Chapter
+              Our Final Chapter ➔
             </button>
             <div className="flex justify-center gap-12">
               <button className="flex flex-col items-center gap-2 group outline-none">
                 <div className="rounded-full bg-white/5 p-3 group-active:bg-primary/20 group-hover:bg-white/10 transition-all duration-300 border border-white/10 group-active:scale-95 group-active:border-primary/50 shadow-lg">
-                  <span className="material-symbols-outlined text-white/90 group-active:text-primary transition-colors text-xl">bookmark</span>
+                  <span className="text-white/90 group-active:text-primary transition-colors text-xl">🔖</span>
                 </div>
                 <span className="text-white/50 text-[10px] uppercase tracking-widest font-medium group-hover:text-white/80 transition-colors">Save</span>
               </button>
               <button className="flex flex-col items-center gap-2 group outline-none">
                 <div className="rounded-full bg-white/5 p-3 group-active:bg-primary/20 group-hover:bg-white/10 transition-all duration-300 border border-white/10 group-active:scale-95 group-active:border-primary/50 shadow-lg">
-                  <span className="material-symbols-outlined text-white/90 transition-colors text-xl">share</span>
+                  <span className="text-white/90 transition-colors text-xl">🔗</span>
                 </div>
                 <span className="text-white/50 text-[10px] uppercase tracking-widest font-medium group-hover:text-white/80 transition-colors">Share</span>
               </button>
