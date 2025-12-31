@@ -35,8 +35,8 @@ const BackgroundMusic: React.FC<{ isPlaying: boolean }> = ({ isPlaying }) => {
         onClick={toggleMute}
         className="fixed top-6 right-6 z-50 p-3 rounded-full bg-white/40 backdrop-blur-md hover:bg-white/60 transition-all text-[#ee2b5b] shadow-sm border border-white/40"
       >
-        <span className="material-symbols-outlined text-xl">
-          {isMuted ? 'volume_off' : 'volume_up'}
+        <span className="text-xl">
+          {isMuted ? '🔇' : '🔊'}
         </span>
       </button>
     </>

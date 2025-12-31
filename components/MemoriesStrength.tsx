@@ -55,7 +55,7 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
               <div className="relative w-full aspect-[4/3] bg-gray-200 dark:bg-gray-800">
                 <div 
                   className="absolute inset-0 bg-cover bg-center" 
-                  style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAizsv-Oqr-Lj791xIxb9vbaMFt5niA1AQ4TzD9d-ICqczl4kg8yA8OnHFNMsDlL8Y1NJuX6eyfb3EwFkG0Pfm8FjjA0DI1Qysfosh0TJ5YxtwkMpA5IB9krJBXnIK0ziO-6n4vWEhFS5cuqlTRSifAjq6i-kcfTmw3gHIpcYStCn-k53dp3DtJPdOsMMFcS1kb3nqO3ZN-j3zJIzaHo2jTuErFUiXTXP3owqgc32PlBG9OT2raXBnFf7ieFexiJgLKDkJXBbExFZz1')" }}
+                  style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAizsv-Oqr-Lj791xIxb9vbaMFt5niA1AQ4TzD9d-ICczl4kg8yA8OnHFNMsDlL8Y1NJuX6eyfb3EwFkG0Pfm8FjjA0DI1Qysfosh0TJ5YxtwkMpA5IB9krJBXnIK0ziO-6n4vWEhFS5cuqlTRSifAjq6i-kcfTmw3gHIpcYStCn-k53dp3DtJPdOsMMFcS1kb3nqO3ZN-j3zJIzaHo2jTuErFUiXTXP3owqgc32PlBG9OT2raXBnFf7ieFexiJgLKDkJXBbExFZz1')" }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
@@ -70,7 +70,7 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-xs text-slate-400 dark:text-white/40 uppercase tracking-widest font-semibold font-sans-alt">March 14, 2025</span>
                   <button className="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">
-                    <span className="material-symbols-outlined text-lg">favorite</span>
+                    <span className="text-lg">❤️</span>
                   </button>
                 </div>
               </div>
@@ -98,7 +98,7 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-xs text-slate-400 dark:text-white/40 uppercase tracking-widest font-semibold font-sans-alt">July 22, 2025</span>
                   <button className="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">
-                    <span className="material-symbols-outlined text-lg">favorite</span>
+                    <span className="text-lg">❤️</span>
                   </button>
                 </div>
               </div>
@@ -126,7 +126,7 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-xs text-slate-400 dark:text-white/40 uppercase tracking-widest font-semibold font-sans-alt">Dec 31, 2025</span>
                   <button className="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">
-                    <span className="material-symbols-outlined text-lg">favorite</span>
+                    <span className="text-lg">❤️</span>
                   </button>
                 </div>
               </div>
@@ -143,7 +143,7 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
               className="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-semibold tracking-wide shadow-lg shadow-primary/30 active:scale-95 transition-transform font-sans-alt"
             >
               <span>Our Future Awaits ➔ 💖</span>
-              <span className="material-symbols-outlined ml-2 text-xl">arrow_forward</span>
+              <span className="ml-2 text-xl">➔</span>
             </button>
           </div>
         </div>

@@ -34,7 +34,7 @@ const PhotoCanvasGallery: React.FC<PhotoCanvasGalleryProps> = ({ onNext, onBack 
           onClick={onBack}
           className="inline-flex items-center gap-2 text-primary text-xs font-bold tracking-widest uppercase hover:opacity-70 transition-opacity"
         >
-          <span className="material-symbols-outlined text-sm">arrow_back</span>
+          <span>⇠</span>
           Go Back 🔙
         </button>
         <h2 className="text-5xl font-cursive text-primary animate-float">Our Canvas of Memories 🎨</h2>
@@ -76,7 +76,7 @@ const PhotoCanvasGallery: React.FC<PhotoCanvasGalleryProps> = ({ onNext, onBack 
           className="group relative inline-flex items-center gap-4 px-12 py-5 bg-primary text-white rounded-full font-sans tracking-[0.3em] uppercase text-[10px] hover:bg-primary/90 transition-all shadow-2xl hover:scale-105 active:scale-95"
         >
           See Our Anniversary ➔ 🗓️❤️
-          <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">favorite</span>
+          <span>❤️</span>
         </button>
       </footer>
     </div>

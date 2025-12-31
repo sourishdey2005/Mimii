@@ -20,11 +20,11 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
             onClick={onBack}
             className="flex items-center justify-center p-2 rounded-full text-gray-800 dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
           >
-            <span className="material-symbols-outlined text-[24px]">arrow_back</span>
+            <span className="text-[24px]">⇠</span>
           </button>
           <h1 className="text-lg font-bold tracking-tight text-gray-900 dark:text-white">Our Future</h1>
           <button className="flex items-center justify-center p-2 rounded-full text-primary hover:bg-primary/10 transition-colors">
-            <span className="material-symbols-outlined text-[24px]">favorite</span>
+            <span className="text-[24px]">❤️</span>
           </button>
         </header>
 
@@ -70,7 +70,7 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
                   <div className="flex items-start justify-between">
                     <div className="space-y-1">
                       <div className="flex items-center gap-2 text-primary dark:text-primary font-semibold text-xs tracking-wider uppercase">
-                        <span className="material-symbols-outlined text-[16px]">flight_takeoff</span>
+                        <span>✈️</span>
                         Summer 2026
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight font-display">The Next Big Trip</h3>
@@ -81,7 +81,7 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
                   </p>
                   <button className="w-full h-12 bg-primary hover:bg-primary/90 active:scale-95 transition-all text-white text-sm font-bold rounded-full flex items-center justify-center gap-2 mt-2 shadow-lg shadow-primary/30">
                     <span>Let's make this happen</span>
-                    <span className="material-symbols-outlined text-[18px]">favorite</span>
+                    <span>❤️</span>
                   </button>
                 </div>
               </div>
@@ -101,7 +101,7 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
                   <div className="flex items-start justify-between">
                     <div className="space-y-1">
                       <div className="flex items-center gap-2 text-primary dark:text-primary font-semibold text-xs tracking-wider uppercase">
-                        <span className="material-symbols-outlined text-[16px]">key</span>
+                        <span>🔑</span>
                         Milestone
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight font-display">A Shared Sanctuary</h3>
@@ -112,7 +112,7 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
                   </p>
                   <button className="w-full h-12 bg-primary hover:bg-primary/90 active:scale-95 transition-all text-white text-sm font-bold rounded-full flex items-center justify-center gap-2 mt-2 shadow-lg shadow-primary/30">
                     <span>I promise</span>
-                    <span className="material-symbols-outlined text-[18px]">check_circle</span>
+                    <span>✅</span>
                   </button>
                 </div>
               </div>
@@ -132,7 +132,7 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
                   <div className="flex items-start justify-between">
                     <div className="space-y-1">
                       <div className="flex items-center gap-2 text-primary dark:text-primary font-semibold text-xs tracking-wider uppercase">
-                        <span className="material-symbols-outlined text-[16px]">landscape</span>
+                        <span>🏔️</span>
                         Growth
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight font-display">Growing Together</h3>
@@ -143,7 +143,7 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
                   </p>
                   <button className="w-full h-12 bg-primary hover:bg-primary/90 active:scale-95 transition-all text-white text-sm font-bold rounded-full flex items-center justify-center gap-2 mt-2 shadow-lg shadow-primary/30">
                     <span>Let's do this</span>
-                    <span className="material-symbols-outlined text-[18px]">bolt</span>
+                    <span>⚡</span>
                   </button>
                 </div>
               </div>
@@ -163,7 +163,7 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
                   <div className="flex items-start justify-between">
                     <div className="space-y-1">
                       <div className="flex items-center gap-2 text-primary dark:text-primary font-semibold text-xs tracking-wider uppercase">
-                        <span className="material-symbols-outlined text-[16px]">coffee</span>
+                        <span>☕</span>
                         Daily Life
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white leading-tight font-display">The Simple Things</h3>
@@ -174,7 +174,7 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
                   </p>
                   <button className="w-full h-12 bg-primary hover:bg-primary/90 active:scale-95 transition-all text-white text-sm font-bold rounded-full flex items-center justify-center gap-2 mt-2 shadow-lg shadow-primary/30">
                     <span>Always</span>
-                    <span className="material-symbols-outlined text-[18px]">all_inclusive</span>
+                    <span>♾️</span>
                   </button>
                 </div>
               </div>
@@ -183,7 +183,7 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
 
           {/* Footer Message & Call to Action */}
           <div className="flex flex-col items-center justify-center py-8 text-center gap-6">
-            <span className="material-symbols-outlined text-primary text-3xl animate-pulse">favorite</span>
+            <span className="text-primary text-3xl animate-pulse">❤️</span>
             <div className="space-y-1">
               <p className="text-lg font-bold text-gray-800 dark:text-gray-200">I can't wait for all of this with you.</p>
               <p className="text-sm text-gray-500 font-sans tracking-widest uppercase">Happy New Year, my love.</p>
@@ -193,8 +193,7 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
               onClick={onNext}
               className="mt-4 px-12 py-5 bg-primary text-white rounded-full font-sans tracking-[0.3em] uppercase text-[10px] hover:bg-primary/90 hover:scale-105 transition-all shadow-xl active:scale-95 flex items-center gap-3"
             >
-              Continue Our Story
-              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+              Continue Our Story ➔
             </button>
           </div>
         </main>
@@ -202,7 +201,7 @@ const FutureDreams: React.FC<FutureDreamsProps> = ({ onNext, onBack }) => {
         {/* Floating Action Button (Music) */}
         <div className="fixed bottom-6 right-6 z-50">
           <button className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 text-primary shadow-lg shadow-primary/20 flex items-center justify-center transition-transform hover:scale-110 active:scale-95 border border-primary/10">
-            <span className="material-symbols-outlined">music_note</span>
+            <span>🎵</span>
           </button>
         </div>
       </div>

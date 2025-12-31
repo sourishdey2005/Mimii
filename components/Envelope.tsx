@@ -16,7 +16,7 @@ const Envelope: React.FC<EnvelopeProps> = ({ isOpen, onOpen, onProceed }) => {
 
       {/* Top Section: Eyebrow */}
       <div className={`w-full flex flex-col items-center pt-8 transition-all duration-1000 ${isOpen ? 'opacity-0 -translate-y-10' : 'opacity-100 animate-fade-in-down'}`}>
-        <span className="material-symbols-outlined text-primary/40 mb-2 text-2xl">stars</span>
+        <span className="text-primary/40 mb-2 text-2xl">✨</span>
         <p className="text-primary text-xs font-semibold uppercase tracking-[0.2em] text-center">Happy New Year 2026</p>
         <p className="font-cursive text-xl text-gray-400 mt-1">Sourish & Arunima Forever</p>
       </div>
@@ -76,7 +76,7 @@ const Envelope: React.FC<EnvelopeProps> = ({ isOpen, onOpen, onProceed }) => {
             </div>
             {/* Wax Seal */}
             <div className={`absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 w-10 h-10 bg-primary rounded-full shadow-lg flex items-center justify-center border-2 border-primary/50 transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
-              <span className="material-symbols-outlined text-white text-[20px]">favorite</span>
+              <span className="text-white text-[20px]">❤️</span>
             </div>
           </div>
         </div>
@@ -87,9 +87,9 @@ const Envelope: React.FC<EnvelopeProps> = ({ isOpen, onOpen, onProceed }) => {
             A letter for the one who made my life beautiful
           </h2>
           <div className="flex justify-center gap-1 opacity-60">
-            <span className="material-symbols-outlined text-sm text-primary">favorite</span>
-            <span className="material-symbols-outlined text-sm text-primary">favorite</span>
-            <span className="material-symbols-outlined text-sm text-primary">favorite</span>
+            <span className="text-sm text-primary">❤️</span>
+            <span className="text-sm text-primary">❤️</span>
+            <span className="text-sm text-primary">❤️</span>
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ const Envelope: React.FC<EnvelopeProps> = ({ isOpen, onOpen, onProceed }) => {
       {/* Bottom Section: Action Hint */}
       <div className={`w-full pb-10 flex flex-col items-center transition-opacity duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
         <p className="text-[#1b0d11]/60 text-sm font-medium animate-pulse-slow flex items-center gap-2">
-          <span className="material-symbols-outlined text-lg">touch_app</span>
+          <span>👆</span>
           Tap to open 👆✨
         </p>
       </div>

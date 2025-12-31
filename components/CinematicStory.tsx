@@ -11,12 +11,12 @@ const CinematicStory: React.FC<CinematicStoryProps> = ({ onNext }) => {
       {/* Sticky Top Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-background-dark/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
         <div className="flex size-10 shrink-0 items-center justify-center rounded-full active:bg-white/10 transition-colors cursor-pointer opacity-0 pointer-events-none">
-          <span className="material-symbols-outlined text-white" style={{ fontSize: '24px' }}>arrow_back</span>
+          <span className="text-white" style={{ fontSize: '24px' }}>⇠</span>
         </div>
         <h2 className="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center opacity-90 font-sans">The Story of Us</h2>
         <div className="flex size-10 items-center justify-center">
           <button className="flex size-10 items-center justify-center rounded-full bg-white/5 active:bg-primary transition-all duration-300">
-            <span className="material-symbols-outlined text-white" style={{ fontSize: '20px' }}>music_note</span>
+            <span className="text-white" style={{ fontSize: '20px' }}>🎵</span>
           </button>
         </div>
       </nav>
@@ -45,7 +45,7 @@ const CinematicStory: React.FC<CinematicStoryProps> = ({ onNext }) => {
               </p>
             </div>
             <div className="absolute bottom-[-60px] animate-bounce opacity-50">
-              <span className="material-symbols-outlined text-white" style={{ fontSize: '24px' }}>keyboard_arrow_down</span>
+              <span className="text-white" style={{ fontSize: '24px' }}>👇</span>
             </div>
           </div>
         </section>
@@ -64,7 +64,7 @@ const CinematicStory: React.FC<CinematicStoryProps> = ({ onNext }) => {
             ></div>
             <div className="absolute bottom-6 left-6 z-20">
               <div className="flex items-center gap-2 text-white/90">
-                <span className="material-symbols-outlined text-primary" style={{ fontSize: '24px' }}>favorite</span>
+                <span className="text-primary" style={{ fontSize: '24px' }}>❤️</span>
                 <span className="text-sm font-sans tracking-[0.2em] uppercase font-bold">She said yes</span>
               </div>
             </div>
@@ -79,7 +79,7 @@ const CinematicStory: React.FC<CinematicStoryProps> = ({ onNext }) => {
         {/* Connector */}
         <div className="flex flex-col items-center justify-center py-4 gap-2 opacity-30">
           <div className="w-px h-16 bg-gradient-to-b from-transparent via-primary to-transparent"></div>
-          <span className="material-symbols-outlined text-primary text-xl">all_inclusive</span>
+          <span className="text-primary text-xl">♾️</span>
           <div className="w-px h-16 bg-gradient-to-b from-transparent via-primary to-transparent"></div>
         </div>
 
@@ -98,7 +98,7 @@ const CinematicStory: React.FC<CinematicStoryProps> = ({ onNext }) => {
             <div className="absolute bottom-6 right-6 z-20 text-right">
               <div className="flex items-center justify-end gap-2 text-white/90">
                 <span className="text-sm font-sans tracking-[0.2em] uppercase font-bold">A reciprocal promise</span>
-                <span className="material-symbols-outlined text-primary" style={{ fontSize: '24px' }}>hotel_class</span>
+                <span className="text-primary" style={{ fontSize: '24px' }}>✨</span>
               </div>
             </div>
           </div>
@@ -141,8 +141,8 @@ const CinematicStory: React.FC<CinematicStoryProps> = ({ onNext }) => {
               onClick={onNext}
               className="group flex items-center justify-center gap-4 rounded-xl bg-primary text-white px-10 py-5 text-base font-bold tracking-[0.2em] uppercase shadow-[0_0_30px_rgba(235,71,112,0.4)] transition-all hover:scale-105 active:scale-95"
             >
-              <span className="material-symbols-outlined group-hover:animate-pulse">redeem</span>
-              Continue Our Journey
+              <span>🎁</span>
+              Continue Our Journey ➔
             </button>
             <footer className="text-white/30 text-[10px] tracking-[0.5em] uppercase font-sans mt-8">
               Forever & Always • 17th & 25th

@@ -73,10 +73,10 @@ const ExpandedGratitude: React.FC<ExpandedGratitudeProps> = ({ onNext, onBack })
             onClick={onBack}
             className="group flex size-12 items-center justify-center rounded-full text-white/60 hover:bg-white/5 hover:text-white transition-all duration-300"
           >
-            <span className="material-symbols-outlined text-[28px]" style={{ fontVariationSettings: "'wght' 300" }}>arrow_back</span>
+            <span className="text-[28px]">⇠</span>
           </button>
           <div className="text-primary animate-pulse-slow opacity-80">
-            <span className="material-symbols-outlined text-[24px]">favorite</span>
+            <span>❤️</span>
           </div>
           <div className="flex w-12 items-center justify-end">
             <span className="text-primary text-xs font-bold font-sans-alt tracking-widest">2026</span>
@@ -96,7 +96,7 @@ const ExpandedGratitude: React.FC<ExpandedGratitudeProps> = ({ onNext, onBack })
               ))}
             </div>
             {/* Decorative Quote Icon */}
-            <span className="material-symbols-outlined text-5xl text-primary/20 mb-6">format_quote</span>
+            <span className="text-5xl text-primary/20 mb-6">“</span>
             {/* Headline */}
             <h1 className="text-center text-white text-[32px] md:text-[40px] font-medium leading-tight tracking-wide drop-shadow-lg mb-6 italic">
               {quotes[index].headline}
@@ -118,9 +118,9 @@ const ExpandedGratitude: React.FC<ExpandedGratitudeProps> = ({ onNext, onBack })
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <span className="text-base font-bold leading-normal tracking-wide relative z-10 font-sans-alt">
-              {index === quotes.length - 1 ? "Keep Journey Going" : "Next Sentiment"}
+              {index === quotes.length - 1 ? "Keep Journey Going ➔ ❤️" : "Next Sentiment ➔"}
             </span>
-            <span className="material-symbols-outlined text-[20px] relative z-10 transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+            <span className="text-[20px] relative z-10 transition-transform duration-300 group-hover:translate-x-1">➔</span>
           </button>
           <div className="mt-6 flex items-center gap-2 opacity-40">
             <span className="text-[10px] font-sans-alt uppercase tracking-[0.2em]">{index + 1} of {quotes.length}</span>

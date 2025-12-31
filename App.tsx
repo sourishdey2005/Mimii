@@ -197,7 +197,7 @@ const App: React.FC = () => {
         {section === AppSection.FUTURE_DREAMS && (
           <FutureDreams 
             onNext={() => setSection(AppSection.ROMANTIC_GALLERY)} 
-            onBack={() => setSection(AppSection.CINEMATIC_STORY)}
+            onBack={() => setSection(AppSection.CANVAS_GALLERY)}
           />
         )}
 
@@ -252,7 +252,7 @@ const App: React.FC = () => {
                   onClick={resetLetter}
                   className="px-12 py-5 rounded-full bg-white border border-[#fecaca] text-[#ee2b5b] font-sans tracking-[0.3em] uppercase text-[10px] hover:bg-[#fffafa] transition-all shadow-md flex items-center gap-3 group"
                 >
-                  Relive Our Story 💌
+                  Relive Our Story ➔ 💌
                 </button>
                 <span className="font-sans text-[10px] tracking-[0.5em] text-gray-400 uppercase opacity-60">Forever Starts Here ➔ 💖</span>
               </div>
