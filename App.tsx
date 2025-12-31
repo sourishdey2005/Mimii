@@ -39,7 +39,7 @@ const App: React.FC = () => {
     setMusicStarted(true);
     
     // Play a one-time "paper opening" sound effect
-    const paperSound = new Audio('https://res.cloudinary.com/dodhvvewu/video/upload/v1767189894/Tere_Liye_Prince_128_Kbps_hs6brw.mp3');
+    const paperSound = new Audio('https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3');
     paperSound.volume = 0.4;
     paperSound.play().catch(() => {});
   };
