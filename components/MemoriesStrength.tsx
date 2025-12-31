@@ -77,13 +77,14 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
           {memories.map((memory, idx) => (
             <div key={memory.id} className="animate-fade-in-up" style={{ animationDelay: `${idx * 0.15}s` }}>
               <div className="flex flex-col items-stretch justify-start rounded-2xl shadow-xl bg-white dark:bg-surface-dark overflow-hidden border border-gray-100 dark:border-white/5">
-                <div className="relative w-full aspect-[4/3] bg-gray-200 dark:bg-gray-800 overflow-hidden">
+                {/* Fixed Aspect Ratio for Mobile Photos (Portrait) */}
+                <div className="relative w-full aspect-[3/4] bg-gray-200 dark:bg-gray-800 overflow-hidden">
                   <img 
                     src={memory.image} 
                     alt={memory.label}
-                    className="w-full h-full object-cover transition-transform duration-1000 hover:scale-110"
+                    className="w-full h-full object-cover object-center transition-transform duration-1000 hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <span className="inline-block px-3 py-1 mb-2 text-[10px] font-bold tracking-[0.2em] text-white uppercase bg-primary rounded-full backdrop-blur-sm font-sans">{memory.label}</span>
                   </div>

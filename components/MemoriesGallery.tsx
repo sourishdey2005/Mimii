@@ -37,8 +37,8 @@ const MemoriesGallery: React.FC<MemoriesGalleryProps> = ({ onNext, onBack }) => 
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-screen font-display animate-fadeIn pb-32">
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 glass-panel max-w-md mx-auto rounded-b-xl border-b border-white/10">
-        <button onClick={onBack} className="p-2 rounded-full text-gray-800 dark:text-white">
-          <span className="material-symbols-outlined">arrow_back</span>
+        <button onClick={onBack} className="flex items-center justify-center p-2 rounded-full text-gray-800 dark:text-white hover:bg-black/5 transition-colors">
+          <span className="text-[24px]">⇠</span>
         </button>
         <h1 className="text-lg font-bold italic tracking-tight text-gray-900 dark:text-white font-serif-quote">Captured Moments 📸</h1>
         <div className="p-2 text-primary">❤️</div>
