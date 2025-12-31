@@ -13,6 +13,8 @@ import FloatingHearts from './components/FloatingHearts.tsx';
 import Envelope from './components/Envelope.tsx';
 import QuoteSlider from './components/QuoteSlider.tsx';
 import BackgroundMusic from './components/BackgroundMusic.tsx';
+import CinematicStory from './components/CinematicStory.tsx';
+import FutureDreams from './components/FutureDreams.tsx';
 
 const App: React.FC = () => {
   const [section, setSection] = useState<AppSection>(AppSection.ENVELOPE);
@@ -32,7 +34,7 @@ const App: React.FC = () => {
     setMusicStarted(true);
     
     // Play a one-time "paper opening" sound effect
-    const paperSound = new Audio('https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3');
+    const paperSound = new Audio('https://res.cloudinary.com/dodhvvewu/video/upload/v1767189894/Tere_Liye_Prince_128_Kbps_hs6brw.mp3');
     paperSound.volume = 0.4;
     paperSound.play().catch(() => {});
   };
@@ -52,10 +54,12 @@ const App: React.FC = () => {
   return (
     <div className="relative min-h-screen w-full select-none font-display overflow-x-hidden">
       <BackgroundMusic isPlaying={musicStarted} />
-      <FloatingHearts />
+      
+      {/* Conditionally render floating hearts if not in cinematic panel to avoid clutter */}
+      {section !== AppSection.CINEMATIC_STORY && section !== AppSection.FUTURE_DREAMS && <FloatingHearts />}
 
       {/* Global Branding Header */}
-      {section !== AppSection.ENVELOPE && (
+      {section !== AppSection.ENVELOPE && section !== AppSection.CINEMATIC_STORY && section !== AppSection.FUTURE_DREAMS && (
         <div className="fixed top-8 left-1/2 -translate-x-1/2 z-[60] flex flex-col items-center pointer-events-none animate-fadeIn">
           <span className="font-cursive text-2xl text-[#ee2b5b] opacity-60">Sourish & Arunima</span>
         </div>
@@ -125,31 +129,20 @@ const App: React.FC = () => {
             subTitle="Brighter together"
             quotes={FESTIVAL_STORY}
             themeColor="#be123c"
-            onComplete={() => setSection(AppSection.ANNIVERSARIES)}
+            onComplete={() => setSection(AppSection.CINEMATIC_STORY)}
             animationClass="animate-shimmer"
           />
         )}
 
-        {section === AppSection.ANNIVERSARIES && (
-          <div className="flex flex-col items-center justify-center min-h-screen px-6 text-center z-10 animate-fadeIn relative">
-             <div className="flex gap-12 items-center justify-center mb-8">
-                <div className="flex flex-col items-center">
-                    <span className="font-cursive text-8xl md:text-[10rem] text-[#ee2b5b] animate-heartbeat drop-shadow-xl">17</span>
-                    <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-gray-400">Day of Us</span>
-                </div>
-                <span className="font-serif text-5xl text-gray-300 italic">&</span>
-                <div className="flex flex-col items-center">
-                    <span className="font-cursive text-8xl md:text-[10rem] text-[#ee2b5b] animate-heartbeat drop-shadow-xl" style={{ animationDelay: '1s' }}>25</span>
-                    <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-gray-400">Day of Love</span>
-                </div>
-             </div>
-             <QuoteSlider 
-                title=""
-                quotes={ANNIVERSARY_STORY}
-                onComplete={() => setSection(AppSection.ROMANTIC)}
-                themeColor="#ee2b5b"
-             />
-          </div>
+        {section === AppSection.CINEMATIC_STORY && (
+          <CinematicStory onNext={() => setSection(AppSection.FUTURE_DREAMS)} />
+        )}
+
+        {section === AppSection.FUTURE_DREAMS && (
+          <FutureDreams 
+            onNext={() => setSection(AppSection.ROMANTIC)} 
+            onBack={() => setSection(AppSection.CINEMATIC_STORY)}
+          />
         )}
 
         {section === AppSection.ROMANTIC && (

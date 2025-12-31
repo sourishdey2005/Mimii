@@ -16,8 +16,8 @@ const QuoteSlider: React.FC<QuoteSliderProps> = ({
   onComplete, 
   title, 
   subTitle, 
-  themeColor = '#B76E79',
-  animationClass = '' 
+  themeColor = '#ee2b5b',
+  animationClass = 'animate-fadeIn'
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -31,40 +31,43 @@ const QuoteSlider: React.FC<QuoteSliderProps> = ({
       } else {
         onComplete();
       }
-    }, 600);
+    }, 500);
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center min-h-screen px-6 py-20 z-10 max-w-4xl mx-auto text-center relative overflow-hidden ${animationClass}`}>
-      <h2 className="font-cursive text-4xl md:text-6xl mb-2 transition-all duration-1000" style={{ color: themeColor }}>{title}</h2>
-      {subTitle && <p className="font-sans text-xs tracking-[0.4em] text-gray-400 mb-12 uppercase animate-fadeIn">{subTitle}</p>}
-      
-      <div className={`glass p-10 md:p-16 rounded-[2.5rem] transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'} shadow-lg border border-white/50 relative overflow-hidden`}>
-        {/* Decorative elements based on animationClass */}
-        {animationClass.includes('animate-shimmer') && <div className="absolute inset-0 pointer-events-none animate-shimmer"></div>}
-        
-        <p className="font-serif text-xl md:text-3xl leading-relaxed text-gray-700 italic relative z-10">
-          "{quotes[currentIndex].text}"
-        </p>
-      </div>
+    <section className={`min-h-screen flex flex-col items-center justify-center px-6 text-center z-10 ${animationClass}`}>
+      <div className="max-w-3xl space-y-12">
+        <div className="space-y-4">
+          {subTitle && <p className="text-[10px] tracking-[0.4em] uppercase text-gray-400 font-sans">{subTitle}</p>}
+          <h2 className="font-cursive text-5xl md:text-7xl text-[#ee2b5b] drop-shadow-sm">{title}</h2>
+        </div>
 
-      <button 
-        onClick={handleNext}
-        className="mt-14 px-10 py-4 rounded-full bg-white border border-[#fecaca] text-[#B76E79] font-sans tracking-[0.2em] uppercase text-[10px] hover:bg-[#fffafa] hover:scale-105 active:scale-95 transition-all shadow-md flex items-center gap-3 group z-20"
-      >
-        {currentIndex === quotes.length - 1 ? 'Reveal More' : 'Continue'}
-        <span className="group-hover:translate-x-1 transition-transform">➜</span>
-      </button>
-      
-      <div className="mt-10 flex gap-3">
-        {quotes.map((_, i) => (
-          <div 
-            key={i} 
-            className={`h-1.5 rounded-full transition-all duration-700 ${i === currentIndex ? 'w-12 bg-[#B76E79]' : 'w-3 bg-pink-100'}`}
-          />
-        ))}
+        <div className={`transition-all duration-500 min-h-[200px] flex items-center justify-center ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <p className="font-serif text-xl md:text-3xl text-gray-600 leading-relaxed italic font-light">
+            "{quotes[currentIndex].text}"
+          </p>
+        </div>
+
+        <div className="pt-8 flex flex-col items-center gap-8">
+          <div className="flex gap-2">
+            {quotes.map((_, i) => (
+              <div 
+                key={i} 
+                className={`h-1 transition-all duration-300 rounded-full ${i === currentIndex ? 'w-8 bg-[#ee2b5b]' : 'w-2 bg-gray-200'}`}
+              />
+            ))}
+          </div>
+          
+          <button 
+            onClick={handleNext}
+            className="group flex items-center gap-3 px-10 py-4 bg-white border border-[#fecaca] text-[#ee2b5b] rounded-full font-sans tracking-[0.3em] uppercase text-[10px] hover:bg-[#fffafa] transition-all shadow-sm active:scale-95"
+          >
+            {currentIndex === quotes.length - 1 ? 'Continue Story' : 'Next Quote'}
+            <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
