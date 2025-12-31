@@ -20,6 +20,7 @@ const App: React.FC = () => {
   const [musicStarted, setMusicStarted] = useState(false);
 
   useEffect(() => {
+    // Prevent right-click for a more "private/app-like" feel
     const handleContextMenu = (e: MouseEvent) => e.preventDefault();
     document.addEventListener('contextmenu', handleContextMenu);
     return () => document.removeEventListener('contextmenu', handleContextMenu);
@@ -27,10 +28,13 @@ const App: React.FC = () => {
 
   const handleOpenEnvelope = () => {
     setIsOpen(true);
+    // Start background music on user interaction
     setMusicStarted(true);
-    const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3');
-    audio.volume = 0.3;
-    audio.play().catch(() => {});
+    
+    // Play a one-time "paper opening" sound effect
+    const paperSound = new Audio('https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3');
+    paperSound.volume = 0.4;
+    paperSound.play().catch(() => {});
   };
 
   const handleProceedFromLetter = () => {
@@ -41,6 +45,7 @@ const App: React.FC = () => {
   const resetLetter = () => {
     setSection(AppSection.ENVELOPE);
     setIsOpen(false);
+    // We don't stop music here so it keeps playing once started
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
