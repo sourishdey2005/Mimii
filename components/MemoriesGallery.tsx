@@ -58,7 +58,7 @@ const MemoriesGallery: React.FC<MemoriesGalleryProps> = ({ onNext, onBack }) => 
               style={{ animationDelay: `${i * 0.2}s` }}
             >
               <div className="aspect-[4/5] w-full overflow-hidden bg-gray-100 mb-4">
-                <img src={photo.url} alt={photo.caption} className="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700" />
+                <img src={https://res.cloudinary.com/dodhvvewu/image/upload/v1767196372/IMG-20251207-WA0023_f8myl8.jpg} alt={photo.caption} className="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-700" />
               </div>
               <div className="px-2 space-y-1">
                 <p className="font-cursive text-2xl text-gray-800 dark:text-pink-100">{photo.caption}</p>
