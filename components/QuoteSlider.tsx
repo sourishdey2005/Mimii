@@ -62,7 +62,7 @@ const QuoteSlider: React.FC<QuoteSliderProps> = ({
             onClick={handleNext}
             className="group flex items-center gap-3 px-10 py-4 bg-white border border-[#fecaca] text-[#ee2b5b] rounded-full font-sans tracking-[0.3em] uppercase text-[10px] hover:bg-[#fffafa] transition-all shadow-sm active:scale-95"
           >
-            {currentIndex === quotes.length - 1 ? 'Continue Story' : 'Next Quote'}
+            {currentIndex === quotes.length - 1 ? 'Continue Story ➔ 🌹' : 'Next Quote ➔ ❤️'}
             <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </button>
         </div>

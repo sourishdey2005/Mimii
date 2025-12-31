@@ -18,6 +18,8 @@ import FutureDreams from './components/FutureDreams.tsx';
 import RomanticGallery from './components/RomanticGallery.tsx';
 import ExpandedGratitude from './components/ExpandedGratitude.tsx';
 import MemoriesStrength from './components/MemoriesStrength.tsx';
+import MemoriesGallery from './components/MemoriesGallery.tsx';
+import PhotoCanvasGallery from './components/PhotoCanvasGallery.tsx';
 
 const App: React.FC = () => {
   const [section, setSection] = useState<AppSection>(AppSection.ENVELOPE);
@@ -63,7 +65,9 @@ const App: React.FC = () => {
        section !== AppSection.FUTURE_DREAMS && 
        section !== AppSection.ROMANTIC_GALLERY && 
        section !== AppSection.EXPANDED_GRATITUDE && 
-       section !== AppSection.MEMORIES_STRENGTH && <FloatingHearts />}
+       section !== AppSection.MEMORIES_STRENGTH && 
+       section !== AppSection.MEMORIES_GALLERY && 
+       section !== AppSection.CANVAS_GALLERY && <FloatingHearts />}
 
       {/* Global Branding Header */}
       {section !== AppSection.ENVELOPE && 
@@ -71,7 +75,9 @@ const App: React.FC = () => {
        section !== AppSection.FUTURE_DREAMS && 
        section !== AppSection.ROMANTIC_GALLERY && 
        section !== AppSection.EXPANDED_GRATITUDE && 
-       section !== AppSection.MEMORIES_STRENGTH && (
+       section !== AppSection.MEMORIES_STRENGTH && 
+       section !== AppSection.MEMORIES_GALLERY && 
+       section !== AppSection.CANVAS_GALLERY && (
         <div className="fixed top-8 left-1/2 -translate-x-1/2 z-[60] flex flex-col items-center pointer-events-none animate-fadeIn">
           <span className="font-cursive text-2xl text-[#ee2b5b] opacity-60">Sourish & Arunima</span>
         </div>
@@ -95,8 +101,7 @@ const App: React.FC = () => {
                   onClick={() => setSection(AppSection.GRATITUDE)}
                   className="px-14 py-5 bg-[#ee2b5b] text-white rounded-full font-sans tracking-[0.4em] uppercase text-[10px] hover:bg-[#d0244f] hover:scale-105 transition-all shadow-xl active:scale-95 group flex items-center gap-3"
                 >
-                  Enter Our World
-                  <span className="group-hover:translate-x-2 transition-transform">✨</span>
+                  Enter Our World ➔ ✨
                 </button>
             </div>
           </section>
@@ -148,8 +153,29 @@ const App: React.FC = () => {
             subTitle="Brighter together"
             quotes={FESTIVAL_STORY}
             themeColor="#be123c"
-            onComplete={() => setSection(AppSection.ANNIVERSARIES)}
+            onComplete={() => setSection(AppSection.MEMORIES_STRENGTH)}
             animationClass="animate-shimmer"
+          />
+        )}
+
+        {section === AppSection.MEMORIES_STRENGTH && (
+          <MemoriesStrength 
+            onNext={() => setSection(AppSection.MEMORIES_GALLERY)}
+            onBack={() => setSection(AppSection.FESTIVALS)}
+          />
+        )}
+
+        {section === AppSection.MEMORIES_GALLERY && (
+          <MemoriesGallery 
+            onNext={() => setSection(AppSection.CANVAS_GALLERY)}
+            onBack={() => setSection(AppSection.MEMORIES_STRENGTH)}
+          />
+        )}
+
+        {section === AppSection.CANVAS_GALLERY && (
+          <PhotoCanvasGallery 
+            onNext={() => setSection(AppSection.ANNIVERSARIES)}
+            onBack={() => setSection(AppSection.MEMORIES_GALLERY)}
           />
         )}
 
@@ -159,15 +185,8 @@ const App: React.FC = () => {
             subTitle="The 17th and the 25th"
             quotes={ANNIVERSARY_STORY}
             themeColor="#B76E79"
-            onComplete={() => setSection(AppSection.MEMORIES_STRENGTH)}
+            onComplete={() => setSection(AppSection.CINEMATIC_STORY)}
             animationClass="animate-fadeIn"
-          />
-        )}
-
-        {section === AppSection.MEMORIES_STRENGTH && (
-          <MemoriesStrength 
-            onNext={() => setSection(AppSection.CINEMATIC_STORY)}
-            onBack={() => setSection(AppSection.ANNIVERSARIES)}
           />
         )}
 
@@ -205,14 +224,14 @@ const App: React.FC = () => {
             <div className="animate-scaleIn max-w-2xl bg-white/40 p-12 rounded-[3rem] backdrop-blur-md border border-white/50">
               <p className="font-serif text-2xl md:text-3xl text-gray-600 italic mb-6">In 2026 and beyond,</p>
               <h2 className="font-cursive text-7xl md:text-9xl text-[#ee2b5b] mt-4 mb-8 drop-shadow-2xl">
-                I choose you.
+                I choose you. ❤️
               </h2>
-              <p className="font-cursive text-3xl md:text-4xl text-[#B76E79] mb-12">Sourish & Arunima Forever</p>
+              <p className="font-cursive text-3xl md:text-4xl text-[#B76E79] mb-12">Sourish & Arunima Forever ♾️</p>
               <button 
                 onClick={() => setSection(AppSection.CLOSING)}
                 className="px-16 py-5 bg-[#ee2b5b] text-white rounded-full font-sans tracking-[0.3em] uppercase text-[10px] hover:bg-[#d0244f] transition-all shadow-xl active:scale-95 hover:scale-105"
               >
-                Our Final Vow
+                Our Final Vow ➔ 💍
               </button>
             </div>
           </section>
@@ -223,7 +242,7 @@ const App: React.FC = () => {
             <div className="glass p-16 md:p-24 rounded-[4rem] max-w-2xl animate-fadeIn shadow-2xl border border-white/80 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#ee2b5b] to-transparent opacity-30"></div>
               <h2 className="font-cursive text-6xl md:text-8xl text-[#ee2b5b] mb-10 leading-tight">
-                Thank you for being my miracle.
+                Thank you for being my miracle. ✨
               </h2>
               <p className="font-serif text-2xl md:text-3xl text-gray-500 mb-16 italic font-light">
                 Happy New Year, my beautiful Arunima ❤️
@@ -235,7 +254,7 @@ const App: React.FC = () => {
                 >
                   Relive Our Story 💌
                 </button>
-                <span className="font-sans text-[10px] tracking-[0.5em] text-gray-400 uppercase opacity-60">Forever Starts Here</span>
+                <span className="font-sans text-[10px] tracking-[0.5em] text-gray-400 uppercase opacity-60">Forever Starts Here ➔ 💖</span>
               </div>
             </div>
           </section>

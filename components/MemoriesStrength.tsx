@@ -24,13 +24,13 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
           >
             <span className="material-symbols-outlined text-2xl">arrow_back</span>
           </div>
-          <h2 className="text-slate-900 dark:text-white text-lg font-bold italic leading-tight tracking-[-0.015em] flex-1 text-center opacity-90">Our Journey</h2>
+          <h2 className="text-slate-900 dark:text-white text-lg font-bold italic leading-tight tracking-[-0.015em] flex-1 text-center opacity-90">Our Journey 🛤️</h2>
           <div className="flex w-12 items-center justify-end">
             <button 
               onClick={onNext}
               className="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0 hover:text-primary/80 transition-colors font-sans-alt"
             >
-              Skip
+              Skip ➔
             </button>
           </div>
         </div>
@@ -38,7 +38,7 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
         {/* Hero Text */}
         <div className="flex flex-col items-center px-6 pt-4 pb-6 animate-fade-in-up">
           <h1 className="text-slate-900 dark:text-white text-[36px] font-medium italic leading-[1.1] text-center mb-4">
-            The Moments That<br/><span className="text-primary">Forged Us</span>
+            The Moments That<br/><span className="text-primary">Forged Us ⚔️❤️</span>
           </h1>
           <p className="text-slate-600 dark:text-gray-300 text-lg font-normal leading-relaxed text-center max-w-xs font-sans-alt">
             2025 challenged us, but 2026 finds us unbreakable.
@@ -59,11 +59,11 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
-                  <span className="inline-block px-2 py-1 mb-2 text-xs font-medium tracking-wide text-white uppercase bg-primary/80 rounded-sm backdrop-blur-sm font-sans-alt">Resilience</span>
+                  <span className="inline-block px-2 py-1 mb-2 text-xs font-medium tracking-wide text-white uppercase bg-primary/80 rounded-sm backdrop-blur-sm font-sans-alt">Resilience ⚓</span>
                 </div>
               </div>
               <div className="flex w-full flex-col gap-3 p-5">
-                <p className="text-slate-900 dark:text-white text-xl font-bold leading-tight italic tracking-wide">Even in the storm</p>
+                <p className="text-slate-900 dark:text-white text-xl font-bold leading-tight italic tracking-wide">Even in the storm ⛈️</p>
                 <p className="text-slate-600 dark:text-text-secondary text-base font-normal leading-relaxed font-sans-alt">
                   "You were my anchor through the hardest nights. When everything felt uncertain, your hand in mine was the only promise I needed."
                 </p>
@@ -87,11 +87,11 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
-                  <span className="inline-block px-2 py-1 mb-2 text-xs font-medium tracking-wide text-white uppercase bg-primary/80 rounded-sm backdrop-blur-sm font-sans-alt">Growth</span>
+                  <span className="inline-block px-2 py-1 mb-2 text-xs font-medium tracking-wide text-white uppercase bg-primary/80 rounded-sm backdrop-blur-sm font-sans-alt">Growth 🌱</span>
                 </div>
               </div>
               <div className="flex w-full flex-col gap-3 p-5">
-                <p className="text-slate-900 dark:text-white text-xl font-bold leading-tight italic tracking-wide">Learning to Listen</p>
+                <p className="text-slate-900 dark:text-white text-xl font-bold leading-tight italic tracking-wide">Learning to Listen 👂✨</p>
                 <p className="text-slate-600 dark:text-text-secondary text-base font-normal leading-relaxed font-sans-alt">
                   "We learned that listening is the loudest form of love. Those long talks until 3 AM didn't just solve problems, they built bridges."
                 </p>
@@ -115,11 +115,11 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
-                  <span className="inline-block px-2 py-1 mb-2 text-xs font-medium tracking-wide text-white uppercase bg-primary/80 rounded-sm backdrop-blur-sm font-sans-alt">Triumph</span>
+                  <span className="inline-block px-2 py-1 mb-2 text-xs font-medium tracking-wide text-white uppercase bg-primary/80 rounded-sm backdrop-blur-sm font-sans-alt">Triumph 🏆</span>
                 </div>
               </div>
               <div className="flex w-full flex-col gap-3 p-5">
-                <p className="text-slate-900 dark:text-white text-xl font-bold leading-tight italic tracking-wide">Distance & Return</p>
+                <p className="text-slate-900 dark:text-white text-xl font-bold leading-tight italic tracking-wide">Distance & Return ✈️🏠</p>
                 <p className="text-slate-600 dark:text-text-secondary text-base font-normal leading-relaxed font-sans-alt">
                   "Distance meant so little when you meant so much. The moment we reunited was worth every second of waiting."
                 </p>
@@ -137,12 +137,12 @@ const MemoriesStrength: React.FC<MemoriesStrengthProps> = ({ onNext, onBack }) =
         {/* Sticky Bottom Action */}
         <div className="fixed bottom-0 left-0 right-0 max-w-md mx-auto p-4 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark dark:to-transparent z-20">
           <div className="flex flex-col items-center gap-2 mb-2">
-            <p className="text-sm font-medium italic text-slate-500 dark:text-white/60 font-serif-quote">Happy New Year, my love.</p>
+            <p className="text-sm font-medium italic text-slate-500 dark:text-white/60 font-serif-quote">Happy New Year, my love ❤️</p>
             <button 
               onClick={onNext}
               className="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-semibold tracking-wide shadow-lg shadow-primary/30 active:scale-95 transition-transform font-sans-alt"
             >
-              <span>Our Future Awaits</span>
+              <span>Our Future Awaits ➔ 💖</span>
               <span className="material-symbols-outlined ml-2 text-xl">arrow_forward</span>
             </button>
           </div>

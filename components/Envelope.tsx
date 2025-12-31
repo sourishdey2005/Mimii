@@ -54,7 +54,7 @@ const Envelope: React.FC<EnvelopeProps> = ({ isOpen, onOpen, onProceed }) => {
                   }}
                   className="mt-2 px-6 py-2 bg-primary text-white font-display text-[10px] tracking-widest uppercase rounded-full hover:bg-primary/90 transition-all animate-fadeIn shadow-lg flex items-center gap-2"
                 >
-                  Read Letter
+                  Read Letter ➔ 💌
                 </button>
               )}
             </div>
@@ -98,7 +98,7 @@ const Envelope: React.FC<EnvelopeProps> = ({ isOpen, onOpen, onProceed }) => {
       <div className={`w-full pb-10 flex flex-col items-center transition-opacity duration-500 ${isOpen ? 'opacity-0' : 'opacity-100'}`}>
         <p className="text-[#1b0d11]/60 text-sm font-medium animate-pulse-slow flex items-center gap-2">
           <span className="material-symbols-outlined text-lg">touch_app</span>
-          Tap to open
+          Tap to open 👆✨
         </p>
       </div>
     </div>
