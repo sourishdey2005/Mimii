@@ -17,11 +17,11 @@ const PhotoCanvasGallery: React.FC<PhotoCanvasGalleryProps> = ({ onNext, onBack 
     { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197521/IMG-20251126-WA0209_obgiyz.jpg", caption: "Hold my hand 🤝" },
     { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197522/IMG-20251123-WA0048_bo4fph.jpg", caption: "Pure Magic ✨" },
     { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197522/IMG-20251126-WA0201_nuzhqd.jpg", caption: "The quiet times 🤫" },
-    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197520/IMG-20251201-WA0031_ika4qh.jpg", caption: "Our first trip ✈️" },
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767198066/20251125_172738_pv8sa5.jpg", caption: "Our first trip ✈️" },
     { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767197519/IMG-20251129-WA0145_lqq21s.jpg", caption: "Beautiful Soul 🌹" },
     { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767198071/20251123_141621_jwmmr3.jpg", caption: "Golden hour 🌅" },
-    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767198066/20251125_172738_pv8sa5.jpg", caption: "Stolen glances 😉" },
-    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767198066/20251125_172738_pv8sa5.jpg", caption: "Forever us 💍" }
+    { url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767198068/20251125_171644_cf8msb.jpg", caption: "Stolen glances 😉" },
+    { url: "", caption: "Forever us 💍" }
   ];
 
   return (
