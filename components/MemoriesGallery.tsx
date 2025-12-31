@@ -18,17 +18,17 @@ const MemoriesGallery: React.FC<MemoriesGalleryProps> = ({ onNext, onBack }) => 
       date: "Spring 2024"
     },
     {
-      url: "https://images.unsplash.com/photo-1522673607200-1648832cee98?q=80&w=1000&auto=format&fit=crop",
+      url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767196372/IMG-20251207-WA0023_f8myl8.jpg",
       caption: "That rainy day in the city ☕️",
       date: "October 2024"
     },
     {
-      url: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1000&auto=format&fit=crop",
+      url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767196695/IMG-20251109-WA0008_wopdsj.jpg",
       caption: "Laughter caught in a frame ✨",
       date: "December 2024"
     },
     {
-      url: "https://images.unsplash.com/photo-1534533983688-c7b8e13fd3b6?q=80&w=1000&auto=format&fit=crop",
+      url: "https://res.cloudinary.com/dodhvvewu/image/upload/v1767196817/IMG-20251129-WA0161_bffu6r.jpg",
       caption: "Walking through history hand in hand 🏛️",
       date: "January 2025"
     }
