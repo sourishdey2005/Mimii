@@ -62,7 +62,7 @@ const RomanticGallery: React.FC<RomanticGalleryProps> = ({ onNext, onBack }) => 
             onClick={onBack}
             className="text-white/80 hover:text-white flex size-12 shrink-0 items-center justify-center rounded-full active:bg-white/10 transition-colors"
           >
-            <span className="text-[24px]">⇠</span>
+            <span className="text-[28px] font-sans">⇠</span>
           </button>
           <h2 className="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center font-display drop-shadow-md">Our Love Story</h2>
           <div className="flex w-12 items-center justify-end">
@@ -86,10 +86,11 @@ const RomanticGallery: React.FC<RomanticGalleryProps> = ({ onNext, onBack }) => 
             <div key={card.id} className="snap-center w-full flex-shrink-0 flex flex-col items-center justify-center h-full">
               <div className="w-full h-full max-h-[65vh] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-1 flex flex-col shadow-2xl relative overflow-hidden group">
                 <div className="relative w-full h-[55%] rounded-xl overflow-hidden">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-[20s] ease-linear transform group-hover:scale-110" 
-                    style={{ backgroundImage: `url('${card.image}')` }}
-                  ></div>
+                  <img 
+                    src={card.image} 
+                    alt={card.label}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-[20s] ease-linear transform group-hover:scale-110" 
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-90"></div>
                   <div className="absolute bottom-4 left-4 right-4 text-center">
                     <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-2">
