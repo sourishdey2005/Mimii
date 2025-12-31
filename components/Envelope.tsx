@@ -9,7 +9,7 @@ interface EnvelopeProps {
 
 const Envelope: React.FC<EnvelopeProps> = ({ isOpen, onOpen, onProceed }) => {
   return (
-    <div className="relative flex flex-col items-center justify-between min-h-screen w-full h-full p-6 z-10">
+    <div className="relative flex flex-col items-center justify-between min-h-screen w-full h-full p-6 z-10 overflow-hidden">
       {/* Background Decoration */}
       <div className="fixed inset-0 pointer-events-none opacity-40 bg-gradient-to-br from-paper-pink via-white to-paper-pink dark:from-background-dark dark:via-[#2a151b] dark:to-background-dark z-0"></div>
       <div className="fixed inset-0 pointer-events-none bg-texture opacity-30 z-0"></div>
@@ -22,7 +22,7 @@ const Envelope: React.FC<EnvelopeProps> = ({ isOpen, onOpen, onProceed }) => {
       </div>
 
       {/* Middle Section: Envelope Interaction */}
-      <div className="flex-grow flex flex-col items-center justify-center w-full max-w-sm envelope-container group/envelope">
+      <div className="flex-grow flex flex-col items-center justify-center w-full max-w-sm envelope-container group/envelope relative">
         <div 
           className={`envelope-wrapper relative w-full aspect-[4/3] cursor-pointer animate-float ${isOpen ? 'is-open' : ''}`}
           onClick={() => !isOpen && onOpen()}
