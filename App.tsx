@@ -10,6 +10,7 @@ import {
   ANNIVERSARY_STORY 
 } from './constants.tsx';
 import FloatingHearts from './components/FloatingHearts.tsx';
+import FallingPetals from './components/FallingPetals.tsx';
 import Envelope from './components/Envelope.tsx';
 import QuoteSlider from './components/QuoteSlider.tsx';
 import BackgroundMusic from './components/BackgroundMusic.tsx';
@@ -59,6 +60,9 @@ const App: React.FC = () => {
   return (
     <div className="relative min-h-screen w-full select-none font-display overflow-x-hidden">
       <BackgroundMusic isPlaying={musicStarted} />
+      
+      {/* Falling Petals Background Layer */}
+      <FallingPetals />
       
       {/* Conditionally render floating hearts if not in cinematic panel to avoid clutter */}
       {section !== AppSection.CINEMATIC_STORY && 

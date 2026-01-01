@@ -39,6 +39,7 @@
                         'float': 'float 6s ease-in-out infinite',
                         'shimmer': 'shimmer 2s infinite linear',
                         'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'petal-fall': 'petalFall 15s linear infinite',
                     },
                     keyframes: {
                         float: {
@@ -52,6 +53,15 @@
                         fadeInUp: {
                             '0%': { opacity: '0', transform: 'translateY(20px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        petalFall: {
+                          '0%': { transform: 'translateY(-10vh) translateX(0) rotate(0deg)', opacity: '0' },
+                          '10%': { opacity: '0.8' },
+                          '25%': { transform: 'translateY(25vh) translateX(25px) rotate(90deg)' },
+                          '50%': { transform: 'translateY(50vh) translateX(-25px) rotate(180deg)' },
+                          '75%': { transform: 'translateY(75vh) translateX(25px) rotate(270deg)' },
+                          '90%': { opacity: '0.8' },
+                          '100%': { transform: 'translateY(110vh) translateX(0) rotate(360deg)', opacity: '0' },
                         }
                     }
                 },
